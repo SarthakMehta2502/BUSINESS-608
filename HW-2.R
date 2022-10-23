@@ -2,7 +2,7 @@
 
 #naming the columns for simpler viewing and using them
 colnames(Typical_Employee_Survey_Data)<- c("Age", "Gender", "JobSatisfaction", "ImportantCharacteristics", "YearsActive", "PromotionChances", "AffectingWorkDec.", "Budg.Decision", "PrideAtWork", "Loyalty", "WorkRelations")
-Typical_Employee_Survey_Data
+#Typical_Employee_Survey_Data data used
 
 
 mydf <- data.frame(Typical_Employee_Survey_Data)  #converting the data set into a data frame
@@ -81,9 +81,9 @@ barplot(mydf$Age) #minimalist bar chart of ages in the survey data
 
 barplot(mydf$Age, main = "Age of People", xlab = "Employees", ylab = "Age", col = "Red") #proper graph of ages with name, y-axis name, x-axis name and colored plots 
 
-pie(mydf$Gender) #minimalist pie chart of employee gender in the survey data
+pie(mydf$Age) #minimalist pie chart of employee ages in the survey data
 
-pie(mydf$Gender, main = "Gender of People") #proper pie chart of employee gender in the survey data with name of the pie chart
+pie(mydf$Age, main = "Ages of Employees") #proper pie chart of employee ages in the survey data with name of the pie chart
 
 stem(mydf$Yrs.Employed)  #creating a stem and leaf plot w.r.t to the Years employed of employees of the company
 
@@ -160,6 +160,5 @@ by(mydf$Yrs.Employed,mydf$JobSatisfaction,mean) #calculating mean of employment 
 aggregate(mydf$Age,list("Type" = mydf$Gender),median) #finding out the median for different gender by ages
 
 aggregate(mydf$Age,list("Type" = mydf$Gender),summary) #finding out the summary from the survey data for different genders by their ages
-
 
 
